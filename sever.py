@@ -98,8 +98,9 @@ def ifS1CoverQEvenly(s1, Q, delta, u_bound):
         coverred = False
          
     return coverred, s1_u
-
-model_path = r'C:\Users\ductuan\wban-imple\hs2hs_n1_lr0_hidden_dim64_num_layers2_seqlen10_offset5_iteration0 (2)'
+# replace with prediction model path
+model_path = r'C:\Users\ductuan\wban-final\prediction_model'
+# prediction model setup
 lr = 0.01
 input_dim = 13
 hidden_dim = 64
