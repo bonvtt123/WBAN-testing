@@ -1,4 +1,4 @@
-# Active Learning for WBAN-based Health Monitoring: Prototype
+# Active Learning for WBAN-based Health Monitoring: Prototype Implementation
 
 
 ## Authors: 
@@ -17,7 +17,7 @@ This setup ensures a comprehensive evaluation of the algorithm's performance acr
 ### Code components:
 - Fitbit environment code:
 
-  -  App (index.js): runs on Fitbit, collecting data when recieve request from the phone.
+  -  App (index.js): runs on Fitbit, collecting data when receive request from the phone.
 
   - Companion (index.js): runs on the smartphone, handling data collection and sending request.
     
@@ -27,7 +27,7 @@ This setup ensures a comprehensive evaluation of the algorithm's performance acr
 
   - scaler.pkl: This file contains the scaler information used for normalizing the data before predictions.
 
-  - prediction model: Pre-trained model file to predict the next 5 minute data (13 dimensions each).
+  - prediction model: Pre-trained model file to predict the next 5 minute data (13 dimensions each minute).
 
   - sever.py: Sever for running the prediction model and implementing proposed sampling algorithm for data collection.
  
@@ -42,8 +42,7 @@ This setup ensures a comprehensive evaluation of the algorithm's performance acr
   - Timestamp: collected in the form mm/dd/yy H:M:S.
 
 ### Implementation: 
-Initially, the smartphone collects data over a specified window size (n = 5 minutes) and predicts the next window. It also runs a sampling algorithm to determine data collection requests to the phone.
-
+Initially, the smartphone collects data over a specified window size (n = 5 minutes). After this period, the phone sends the data to the server. The server then predicts the next 5 minutes of data and runs a sampling algorithm to determine the data collection decisions, which are sent back to the phone.
 After that, at the start of each 5-minute prediction window, the server uses the data from the previous window to make predictions (replacing assumptions with actual observed data). The sever then runs sampling algorithm to select sampling epochs (each of 1
 minute) in this window and sends the decision to the phone via
 WiFi. The phone then sends a sampling request to FitBit at the
@@ -98,7 +97,7 @@ The phone will now connect to the sever, and run the prototype.
 In sever.py, change `switch=0` if you want to collect all the ground truth data, `switch=1` to only collect the sampling data. 
 ### More about out research:
 Cho-Chun Chiu, Tuan Nguyen, Ting He, Shiqiang Wang, Beom-Su Kim, and Ki-Il
-Kim. 2024. [Active Learning for WBAN-based Health Monitoring](https://sites.psu.edu/nsrg/files/2024/04/Active_Learning_WBAN_report-9398f06ded786a84.pdf).
+Kim. 2024. [Active Learning for WBAN-based Health Monitoring](https://bpb-us-e1.wpmucdn.com/sites.psu.edu/dist/a/74125/files/2024/04/Active_Learning_WBAN_report-06c5b5f80ce53888.pdf).
 ### Fitbit Developer API:
 [Device API](https://dev.fitbit.com/build/reference/device-api/)
 
