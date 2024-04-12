@@ -1,5 +1,3 @@
-*This README.md file was generated on YYYYMMDD by NAME*
-<!-- remove all comments (like this) before final save  -->
 
 General Information
 ------------------
@@ -7,34 +5,8 @@ General Information
 ### Title: Active Learning for WBAN-based Health Monitoring: Prototype Code
 
 ### Author Information:
+Tuan Nguyen, Cho-Chun Chiu, and Ting He
 
-- Principal Investigator:
-- Associate or Co-investigator:
-- Alternate Contact(s):
-
-### Date of data collection/creation:
-<!-- (single date, range, approximate date. Suggested format YYYYMMDD -->
-
-### Geographic location of data collection:
-<!--City, State, County, Country and/or GPS Coordinates or bounding boxes--> 
-
-### Funders and sponsors of data collection:
-
-
-
-Sharing/Access Information
---------------------------
-
-### License & restrictions on data reuse:
-<!-- Creative Commons Attribution 4.0 International (CC BY 4.0)  -->
-
-### Recommended citation for the data:
-<!-- suggested: Creator (PublicationYear). Title. Publisher. Identifier -->
-
-### Related publications:
-<!-- Citation for and links to publications that cite or use the data -->
-
-### Links to other publicly accessible locations of the data:
 <!-- for example, GitHub repo -->
 
 ### Related data sets: 
