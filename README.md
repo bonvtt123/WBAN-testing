@@ -1,82 +1,71 @@
-# Active Learning for WBAN-based Health Monitoring: Prototype"
+# Active Learning for WBAN-based Health Monitoring: Prototype
 
 
 ## Authors: 
 Tuan Nguyen, Cho-Chun Chiu, Ting He
 
+## Introduction:
 
-## Getting Started
+### Description:
+talk about the project description +components
 
-### Dependencies
+The project used Google Pixel 6 and Fitbit Versa 2 for running.
+![image](https://github.com/bonvtt123/testing/assets/69983102/84db02b6-14d8-49cc-af02-237374d9a982)
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+### Code components:
+- Phone code (Javascript):
 
-### Installing
+  -  App: index.js: the code for running for watches.
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+  - Companion:index.js:  the code for running for phone.
 
-### Executing program
+- Sever code(Python):
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+  - Scaler.pkl: Scaler information for data prediction
 
-## Help
+  - Prediction model: Pre-trained model file
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+  - sever.py sever for running prediction and sampling algorithm
 
-## Authors
+### Data return:
 
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
-
-### `sample2/*.csv`
-- Number of variables:
-- Number of cases/rows: 
-- Variable list, defining any abbreviations, units of measure, codes or symbols used:
-- Missing data codes:
-- Specialized formats or other abbreviations used:
+Data item in list 1-12: heart rate data  , 13: step counts
 
 
-Methodological Information
---------------------------
 
-<!-- 
-Description of methods used for collection/generation of data: <Include links or references to publications or other documentation containing experimental design or protocols used in data collection>
-Methods for processing the data: <describe how the submitted data were generated from the raw or collected data>
-Standards and calibration information, if appropriate:
-Environmental/experimental conditions:
-Describe any quality-assurance procedures performed on the data:
-People involved with sample collection, processing, analysis and/or submission: 
--->
 
+## Getting started:
+### Running the sever (Python):
+1. Replace the path for prediction model and scaler with your path
+2. in the termial type:
+`py sever.py`
+### Set up Fitbit Environment (JavaScript):
+Read about set up your environment at: https://dev.fitbit.com/getting-started/
+
+**Important:**
+
+- For Fitbit Versa 2, use `npx create-fitbit-app myVersa2Project --sdk-version 4.3.0` instead of `npx create-fitbit-app myVersa2Project` to have correct version
+
+- Include the companion file when set up your envinronment
+
+### Prepare the app:
+Replace the content of app and companion file, package.json with the new content 
+###  Installing the app in Phone Fitbit app:
+If you're using a Fitbit device, you need to enable the Developer Bridge. On the watch, go to Settings and tap Developer Bridge, then wait until it says Connected to Server.
+
+NOTE: WiFi must be configured on the device. The first connection attempt can take up to 20 seconds before it's fully established, but subsequent attempts should be instantaneous.
+
+The simulator or device should now be connected to the developer bridge.
+
+Now type:
+
+`npx fitbit`
+
+This will launch the interactive Fitbit Shell and your command prompt should now display fitbit$.
+
+From the Fitbit Shell, type `bi` to build and install the app .
+### Running the app:
+The phone will now connect to the sever, and run the prototype.
+## More information:
+### Change experienment type:
+In sever change `switch=0` if you want to collect all the grouth truth data, `switch=1` to only collect the sampling data. 
