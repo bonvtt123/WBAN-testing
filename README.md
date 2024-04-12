@@ -9,7 +9,7 @@ Tuan Nguyen, Cho-Chun Chiu, Ting He
 ### Overview:
 ![image](https://github.com/bonvtt123/WBAN-testing/assets/69983102/dce1bc42-4bc3-4d2c-871b-d214170a7e08)
 
-This projects implement *Algorithm 1*. We use a Google Pixel 6 smartphone as the coordinator and a Fitbit Versa 2 as the sensing device. 
+This project serves as the prototype implementation of Algorithm 1, utilizing a smartphone (Google Pixel 6) as the coordinator and a Fitbit device (Versa 2) as the sensing device. We also employ a workstation running PyTorch as the server, which is used for training and testing both the forecasting model and the target model. This setup ensures a comprehensive evaluation of the algorithm's performance across different hardware environments, enhancing the predictive accuracy and reliability of the proposed method. The integration of these technologies provides a efficient solution for real-time data analysis and data collection.
 ### Code components:
 - Fitbit environment code:
 
@@ -86,6 +86,9 @@ From the Fitbit Shell, type `bi` to build and install the app.
 (Source: [Fitbit Developer](https://dev.fitbit.com/getting-started/))
 ### Running the app:
 The phone will now connect to the sever, and run the prototype.
+
+**Important: Run the sever before running Fitbit environment to avoid data delay**
+
 ## More information:
 ### Change experienment type:
 In sever.py, change `switch=0` if you want to collect all the ground truth data, `switch=1` to only collect the sampling data. 
