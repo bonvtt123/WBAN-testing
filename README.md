@@ -11,27 +11,31 @@ Tuan Nguyen, Cho-Chun Chiu, Ting He
 This prototype project explores the potential of Wireless Body Area Networks (WBAN) for real-time health monitoring by using advanced wearable technology. The hardware base includes a Google Pixel 6 and a Fitbit Versa 2, which are employed to collect vital health metrics such as heart rate and steps taken. The software component of the project is structured into phone and server codes which facilitate data processing and analysis.
 
 ### Code components:
-- Fitbit environment code (Javascript):
+- Fitbit environment code:
 
-  -  App (index.js): designs for watches app, collecting data when recieve request from the phone.
+  -  App (index.js): designs for Fitbit, collecting data when recieve request from the phone.
 
   - Companion (index.js): runs on the smartphone, handling data collection and sending request.
     
   - package.json: 
 
-- Sever code(Python):
+- Sever code:
 
-  - Scaler.pkl: This file contains the scaler information used for normalizing the data before predictions.
+  - scaler.pkl: This file contains the scaler information used for normalizing the data before predictions.
 
-  - Prediction model: Pre-trained model file to predict the next 5 minute data (13 dimensions each).
+  - prediction model: Pre-trained model file to predict the next 5 minute data (13 dimensions each).
 
-  - sever.py: Responsible for running the prediction model and implementing proposed sampling algorithm to process the data.
+  - sever.py: sever for running the prediction model and implementing proposed sampling algorithm for data collection.
  
 
 
-### Data return:
+### Data Structure:
+List data (prediction and ground truth):
+- Items 1-12: Represent heart rate data collected over various intervals.
+- Item 13: Represents the step count.
 
-Data item in list 1-12: heart rate data  , 13: step counts
+Additional data:
+- Timestamp: collected in the form mm/dd/yy H:M:S
 
 ### Implementation: 
 
@@ -45,6 +49,8 @@ together with other collected samples at the end of the window.
 ![image](https://github.com/bonvtt123/testing/assets/69983102/84db02b6-14d8-49cc-af02-237374d9a982)
 
 ## Getting started:
+
+**Important: Phone and sever should be on the same wifi network**
 ### Running the sever (Python):
 1. Replace the path for prediction model and scaler with your path
 2. in the termial type:
@@ -63,7 +69,7 @@ Replace the content of app and companion file, package.json with the new content
 ###  Installing the app in Phone Fitbit app:
 If you're using a Fitbit device, you need to enable the Developer Bridge. On the watch, go to Settings and tap Developer Bridge, then wait until it says Connected to Server.
 
-NOTE: WiFi must be configured on the device. The first connection attempt can take up to 20 seconds before it's fully established, but subsequent attempts should be instantaneous.
+NOTE: WiFi must be configured on the device.
 
 The simulator or device should now be connected to the developer bridge.
 
@@ -72,8 +78,8 @@ Now type:
 `npx fitbit`
 
 This will launch the interactive Fitbit Shell and your command prompt should now display fitbit$.
-
 From the Fitbit Shell, type `bi` to build and install the app .
+
 ### Running the app:
 The phone will now connect to the sever, and run the prototype.
 ## More information:
