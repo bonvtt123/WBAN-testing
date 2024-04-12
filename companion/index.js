@@ -1,5 +1,6 @@
 import * as messaging from "messaging";
 
+// function to send request to the watch
 function heartRate() {
     return new Promise((resolve, reject) => {
         if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
@@ -17,7 +18,7 @@ function heartRate() {
             setTimeout(() => {
                 messaging.peerSocket.removeEventListener("message", messageListener);
                 reject(new Error("Heart rate data timeout"));
-            }, 70000); // 60-second timeout
+            }, 70000); // timeout set up (only if there is an error)
         } else {
             console.log("unavailable connection");
             reject(new Error("Connection is closed"));
@@ -30,8 +31,9 @@ async function fetchIndicatorsAndCollectData() {
     const { indicators } = await response.json();
     console.log(`indi: ${indicators}`);
     let heartData = [];
-    let timeData = [];  
+    let timeData = [];
     for (let i = 0; i < win_size; i++) {
+        // if indicators =1 then collect data, else wait for next minute
         if (indicators[i] === 1) {
             try {
                 // Attempt to collect heart rate data
