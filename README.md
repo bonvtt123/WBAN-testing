@@ -10,20 +10,20 @@ Tuan Nguyen, Cho-Chun Chiu, Ting He
 
 This prototype project explores the potential of Wireless Body Area Networks (WBAN) for real-time health monitoring by using advanced wearable technology. The hardware base includes a Google Pixel 6 and a Fitbit Versa 2, which are employed to collect vital health metrics such as heart rate and steps taken. The software component of the project is structured into phone and server codes which facilitate data processing and analysis.
 
-![image](https://github.com/bonvtt123/testing/assets/69983102/84db02b6-14d8-49cc-af02-237374d9a982)
-
 ### Code components:
 - Fitbit environment code (Javascript):
 
   -  App (index.js): designs for watches app, collecting data when recieve request from the phone.
 
-  - Companion (index.js): runs on the smartphone, handling data collection and sending request .
+  - Companion (index.js): runs on the smartphone, handling data collection and sending request.
+    
+  - package.json: 
 
 - Sever code(Python):
 
   - Scaler.pkl: This file contains the scaler information used for normalizing the data before predictions.
 
-  - Prediction model: Pre-trained model file to predict the next 5 minute da
+  - Prediction model: Pre-trained model file to predict the next 5 minute data (13 dimensions each).
 
   - sever.py: Responsible for running the prediction model and implementing proposed sampling algorithm to process the data.
  
@@ -42,7 +42,7 @@ WiFi. The phone then sends a sampling request to FitBit at the
 beginning of each selected sampling epoch via Bluetooth. When requested, FitBit reports the collected sample at the end of the epoch,
 which is then buffered at the phone and sent back to the server
 together with other collected samples at the end of the window. 
-
+![image](https://github.com/bonvtt123/testing/assets/69983102/84db02b6-14d8-49cc-af02-237374d9a982)
 
 ## Getting started:
 ### Running the sever (Python):
