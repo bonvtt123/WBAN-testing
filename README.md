@@ -54,7 +54,7 @@ together with other collected samples at the end of the window.
 
 ## Getting started:
 
-**Important: The Smartphone and sever should be on the same wifi network**
+**Important: The Smartphone and sever should be on the same wifi network.**
 
 ### Running the sever (Python):
 1. Replace the path for prediction model and scaler with your path.
