@@ -4,34 +4,44 @@
 ## Authors: 
 Tuan Nguyen, Cho-Chun Chiu, Ting He
 
-## Introduction:
+## Project Description:
 
-### Description:
-talk about the project description +components
+### Overview:
 
-The project used Google Pixel 6 and Fitbit Versa 2 for running.
+This prototype project explores the potential of Wireless Body Area Networks (WBAN) for real-time health monitoring by using advanced wearable technology. The hardware base includes a Google Pixel 6 and a Fitbit Versa 2, which are employed to collect vital health metrics such as heart rate and steps taken. The software component of the project is structured into phone and server codes which facilitate data processing and analysis.
+
 ![image](https://github.com/bonvtt123/testing/assets/69983102/84db02b6-14d8-49cc-af02-237374d9a982)
 
 ### Code components:
-- Phone code (Javascript):
+- Fitbit environment code (Javascript):
 
-  -  App: index.js: the code for running for watches.
+  -  App (index.js): designs for watches app, collecting data when recieve request from the phone.
 
-  - Companion:index.js:  the code for running for phone.
+  - Companion (index.js): runs on the smartphone, handling data collection and sending request .
 
 - Sever code(Python):
 
-  - Scaler.pkl: Scaler information for data prediction
+  - Scaler.pkl: This file contains the scaler information used for normalizing the data before predictions.
 
-  - Prediction model: Pre-trained model file
+  - Prediction model: Pre-trained model file to predict the next 5 minute da
 
-  - sever.py sever for running prediction and sampling algorithm
+  - sever.py: Responsible for running the prediction model and implementing proposed sampling algorithm to process the data.
+ 
+
 
 ### Data return:
 
 Data item in list 1-12: heart rate data  , 13: step counts
 
+### Implementation: 
 
+At the beginning of every prediction window of 5 minutes (𝑛 = 5),
+the server predicts the next 5 data, runs sampling algorithm to select sampling epochs (each of 1
+minute) in this window and sends the decision to the phone via
+WiFi. The phone then sends a sampling request to FitBit at the
+beginning of each selected sampling epoch via Bluetooth. When requested, FitBit reports the collected sample at the end of the epoch,
+which is then buffered at the phone and sent back to the server
+together with other collected samples at the end of the window. 
 
 
 ## Getting started:
@@ -40,7 +50,7 @@ Data item in list 1-12: heart rate data  , 13: step counts
 2. in the termial type:
 `py sever.py`
 ### Set up Fitbit Environment (JavaScript):
-Read about set up your environment at: https://dev.fitbit.com/getting-started/
+Read about setting up your environment at: https://dev.fitbit.com/getting-started/
 
 **Important:**
 
