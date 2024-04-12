@@ -8,7 +8,6 @@ Tuan Nguyen, Cho-Chun Chiu, Ting He
 
 ### Overview:
 
-This prototype project explores the potential of Wireless Body Area Networks (WBAN) for real-time health monitoring by using advanced wearable technology. The hardware base includes a Google Pixel 6 and a Fitbit Versa 2, which are employed to collect vital health metrics such as heart rate and steps taken. The software component of the project is structured into phone and server codes which facilitate data processing and analysis.
 
 ### Code components:
 - Fitbit environment code:
@@ -80,8 +79,18 @@ Now type:
 This will launch the interactive Fitbit Shell and your command prompt should now display fitbit$.
 From the Fitbit Shell, type `bi` to build and install the app .
 
+(SourceL: [Fitbit Developer](https://dev.fitbit.com/getting-started/)
 ### Running the app:
 The phone will now connect to the sever, and run the prototype.
 ## More information:
 ### Change experienment type:
 In sever change `switch=0` if you want to collect all the grouth truth data, `switch=1` to only collect the sampling data. 
+### More about out research:
+Cho-Chun Chiu, Tuan Nguyen, Ting He, Shiqiang Wang, Beom-Su Kim, and Ki-Il
+Kim. 2024. [Active Learning for WBAN-based Health Monitoring](https://sites.psu).
+### Fitbit Developer API:
+[Device API](https://dev.fitbit.com/build/reference/device-api/)
+
+[Companion API](https://dev.fitbit.com/build/reference/companion-api/)
+
+[Intensity](https://dev.fitbit.com/build/reference/web-api/intraday/get-activity-intraday-by-date/)
