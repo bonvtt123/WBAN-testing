@@ -17,7 +17,7 @@ This setup ensures a comprehensive evaluation of the algorithm's performance acr
 ### Code components:
 - Fitbit environment code:
 
-  -  App (index.js): designs for Fitbit, collecting data when recieve request from the phone.
+  -  App (index.js): runs on Fitbit, collecting data when recieve request from the phone.
 
   - Companion (index.js): runs on the smartphone, handling data collection and sending request.
     
