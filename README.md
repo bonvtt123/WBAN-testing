@@ -35,8 +35,8 @@ This setup ensures a comprehensive evaluation of the algorithm's performance acr
 
 ### Data Structure:
 - List data (prediction and ground truth):
-  - Items 1-12: Represent heart rate data collected over various intervals.
-  - Item 13: Represents the step count.
+  - Items 1-12: heart rate data collected over 1 minute (5 seconds apart).
+  - Item 13: step count.
 
 - Additional data:
   - Timestamp: collected in the form mm/dd/yy H:M:S.
@@ -65,7 +65,7 @@ Read about setting up your environment at: https://dev.fitbit.com/getting-starte
 
 **Important:**
 
-- For Fitbit Versa 2, use `npx create-fitbit-app myVersa2Project --sdk-version 4.3.0` instead of `npx create-fitbit-app myVersa2Project` to have correct version
+- For Fitbit Versa 2 app, use `npx create-fitbit-app myVersa2Project --sdk-version 4.3.0` instead of `npx create-fitbit-app myVersa2Project` to have correct version
 
 - Include the companion file when setting up your envinronment
 
