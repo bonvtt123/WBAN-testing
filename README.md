@@ -1,15 +1,10 @@
-
-General Information
+Active Learning for WBAN-based Health Monitoring: Prototype Code
 ------------------
-
-### Title: Active Learning for WBAN-based Health Monitoring: Prototype Code
 
 ### Author Information:
 Tuan Nguyen, Cho-Chun Chiu, and Ting He
 
-<!-- for example, GitHub repo -->
-
-### Related data sets: 
+### Background information: 
 
 
 Data & File Overview
