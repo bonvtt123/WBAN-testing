@@ -98,7 +98,7 @@ The phone will now connect to the sever, and run the prototype.
 In sever.py, change `switch=0` if you want to collect all the ground truth data, `switch=1` to only collect the sampling data. 
 ### More about out research:
 Cho-Chun Chiu, Tuan Nguyen, Ting He, Shiqiang Wang, Beom-Su Kim, and Ki-Il
-Kim. 2024. [Active Learning for WBAN-based Health Monitoring](https://sites.psu).
+Kim. 2024. [Active Learning for WBAN-based Health Monitoring](https://sites.psu.edu/nsrg/files/2024/04/Active_Learning_WBAN_report-9398f06ded786a84.pdf).
 ### Fitbit Developer API:
 [Device API](https://dev.fitbit.com/build/reference/device-api/)
 
