@@ -91,7 +91,7 @@ From the Fitbit Shell, type `bi` to build and install the app.
 ### Running the app:
 The phone will now connect to the sever, and run the prototype.
 
-**Important: Run the sever before running Fitbit environment to avoid data delay**
+**Important: Run the sever before running Fitbit environment to avoid data delay.**
 
 ## More information:
 ### Change experienment type:
